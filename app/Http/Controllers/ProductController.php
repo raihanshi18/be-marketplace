@@ -10,6 +10,11 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
+    // function __construct()
+    // {
+    //     $this->middleware('auth:sanctum', ["except" => ["index"]]);
+    // }
+    
     public function index()
     {
         $data = Product::join('product_types', 'products.products_type_id', '=', 'product_types.id')
